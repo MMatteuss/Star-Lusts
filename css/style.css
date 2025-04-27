@@ -1,0 +1,385 @@
+:root {
+    --primary-pink: #ff2d75;
+    --primary-blue: #00f0ff;
+    --dark-bg: #0a0a1a;
+    --light-bg: #1a1a3a;
+    --accent-purple: #b400ff;
+    --pastel-pink: #ffb6e6;
+    --pastel-blue: #b6e6ff;
+    --text-white: #ffffff;
+    --text-glow: 0 0 10px var(--primary-pink), 0 0 20px var(--primary-blue);
+  }
+  
+  body {
+    background-color: var(--dark-bg);
+    color: var(--text-white);
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('scifi-grid.png');
+    background-attachment: fixed;
+  }
+  
+  header {
+    background: linear-gradient(90deg, rgba(10,10,26,0.8) 0%, rgba(26,26,58,0.8) 50%, rgba(10,10,26,0.8) 100%);
+    backdrop-filter: blur(5px);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--primary-pink);
+  }
+  
+  .logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    background: linear-gradient(to right, var(--primary-pink), var(--accent-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: var(--text-glow);
+    text-align: center;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  
+  nav a:hover {
+    background-color: var(--primary-pink);
+    color: var(--dark-bg);
+    box-shadow: 0 0 15px var(--primary-pink);
+  }
+  
+  .hero {
+    height: 80vh;
+    background: url('waifu-hero-banner.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(10,10,26,0.2) 0%, rgba(10,10,26,0.8) 100%);
+  }
+  
+  .hero-content {
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: var(--text-glow);
+    background: linear-gradient(to right, var(--primary-pink), var(--primary-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary-pink), var(--accent-purple));
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px var(--primary-pink);
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--primary-pink);
+  }
+  
+  .waifu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem;
+  }
+  
+  .waifu-card {
+    background: var(--light-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary-blue);
+    position: relative;
+  }
+  
+  .waifu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px var(--primary-pink);
+  }
+  
+  .waifu-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .waifu-info {
+    padding: 1rem;
+  }
+  
+  .waifu-name {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--pastel-pink);
+  }
+  
+  .waifu-desc {
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0;
+    color: var(--pastel-blue);
+  }
+  
+  .game-section {
+    padding: 4rem;
+    background: var(--light-bg);
+    margin: 3rem 0;
+  }
+  
+  .game-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .game-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .game-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .game-features {
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  .game-features li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .game-image {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid var(--primary-blue);
+    box-shadow: 0 0 30px var(--primary-pink);
+  }
+  
+  footer {
+    background: linear-gradient(90deg, var(--dark-bg) 0%, var(--light-bg) 50%, var(--dark-bg) 100%);
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid var(--primary-blue);
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .social-icon {
+    color: var(--text-white);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: var(--primary-pink);
+    transform: scale(1.2);
+  }
+  
+  .ero-labs {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-pink);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  .footer-links {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .footer-links a {
+    color: var(--primary-blue);
+    margin: 0 0.5rem;
+    text-decoration: none;
+  }
+  
+  /* Media Queries para Responsividade */
+  @media (max-width: 1200px) {
+    .hero-content {
+      padding: 1.5rem;
+    }
+    
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .logo {
+      font-size: 2rem;
+    }
+    
+    nav ul {
+      gap: 1rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    .game-section {
+      padding: 3rem 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: 70vh;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    .waifu-grid {
+      padding: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .waifu-img {
+      height: 250px;
+    }
+    
+    .game-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .logo {
+      font-size: 1.8rem;
+    }
+    
+    nav ul {
+      gap: 0.5rem;
+    }
+    
+    nav a {
+      padding: 0.3rem 0.7rem;
+      font-size: 0.8rem;
+    }
+    
+    .hero {
+      height: 60vh;
+    }
+    
+    h1 {
+      font-size: 1.8rem;
+    }
+    
+    .cta-button {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+    }
+    
+    .waifu-grid {
+      padding: 1.5rem;
+      grid-template-columns: 1fr;
+    }
+    
+    .game-section {
+      padding: 2rem 1rem;
+    }
+    
+    .section-title {
+      font-size: 1.8rem;
+    }
+    
+    .social-links {
+      gap: 1rem;
+    }
+    
+    .social-icon {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .logo {
+      font-size: 1.5rem;
+    }
+    
+    h1 {
+      font-size: 1.5rem;
+    }
+    
+    .hero-content {
+      padding: 1rem;
+    }
+    
+    .waifu-grid {
+      padding: 1rem;
+    }
+    
+    .waifu-name {
+      font-size: 1.3rem;
+    }
+  }
